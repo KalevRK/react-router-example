@@ -1,0 +1,29 @@
+{
+  "name": "react-router-example",
+  "version": "1.0.0",
+  "description": "A sample project to test using React routers.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KalevRK/react-router-example.git"
+  },
+  "author": "Kalev Roomann-Kurrik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KalevRK/react-router-example/issues"
+  },
+  "homepage": "https://github.com/KalevRK/react-router-example",
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "gulp": "^3.9.0",
+    "gulp-html-replace": "^1.5.1",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.1.0",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.0"
+  }
+}
