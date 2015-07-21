@@ -10,7 +10,7 @@ var streamify = require('gulp-streamify');
 var path = {
   HTML: 'public/src/index.html',
   MINIFIED_OUT: 'build.min.js',
-  OUT: 'build.js',
+  OUT: 'app.js',
   DEST: 'public/dist',
   DEST_BUILD: 'public/dist/build',
   DEST_SRC: 'public/dist/src',
