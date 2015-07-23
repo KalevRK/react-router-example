@@ -1,15 +1,9 @@
 var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
+var Link = Router.Link;
+var DefaultRoute = Router.DefaultRoute;
 var RouteHandler = Router.RouteHandler;
-
-// Declare our routes and their hierarchy
-var routes = (
-  <Route handler={App}>
-    <Route path="about" handler={About}/>
-    <Route path="inbox" handler={Inbox}/>
-  </Route>
-);
 
 var About = React.createClass({
   render: function() {
@@ -32,16 +26,29 @@ var Home = React.createClass({
 var App = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="app">
         <h1>App</h1>
-        <RouteHandler />
+        <div className="nav">
+          <Link to="app">Home</Link><br/>
+          <Link to="about">About</Link><br/>
+          <Link to="inbox">Inbox</Link>
+          <RouteHandler/>
+        </div>
       </div>
-    )
+    );
   }
 });
 
-Router.run(routes, Router.HashLocation, (Root) => {
-  React.render(<Root/>, document.body);
+// Declare our routes and their hierarchy
+var routes = (
+  <Route name="app" path="/" handler={App}>
+    <Route name="about" path="/about" handler={About}/>
+    <Route name="inbox" path="/inbox" handler={Inbox}/>
+  </Route>
+);
+
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.body);
 });
 
 // function render() {
